@@ -75,27 +75,22 @@
   <script>
   function runAway(btn) 
   {
-  let rect = btn.getBoundingClientRect();
-  let newX = rect.left + (Math.random() * 300 - 150);
-  let newY = rect.top  + (Math.random() * 300 - 150);
+    let rect = btn.getBoundingClientRect();
+    let newX = rect.left + (Math.random() * 300 - 150);
+    let newY = rect.top  + (Math.random() * 300 - 150);
 
-  newX = Math.max(20, Math.min(window.innerWidth - 160, newX));
-  newY = Math.max(20, Math.min(window.innerHeight - 100, newY));
+    newX = Math.max(20, Math.min(window.innerWidth - 160, newX));
+    newY = Math.max(20, Math.min(window.innerHeight - 100, newY));
 
-  btn.style.left = newX + 'px';
-  btn.style.top  = newY + 'px';
-  btn.style.position = 'fixed';
+    btn.style.left = newX + 'px';
+    btn.style.top  = newY + 'px';
+    btn.style.position = 'fixed';
  }
 
 function yesClicked() {
-
-confetti({
-    particleCount: 120,
-    spread: 70,
-    origin: { y: 0.6 },
-    colors: ['#ff4081', '#f50057', '#ff80ab']
-  });
-
+      // You can make this much fancier: confetti, music, redirect, etc.
+      alert("YAYYYYY!!! 🎉💕 I LOVE YOU!!");
+      
 document.body.style.background = "linear-gradient(to bottom, #ff4081, #f50057)";
 document.querySelector("h1").innerHTML = "Best decision ever!! 😍💘";
     }
@@ -103,6 +98,7 @@ document.querySelector("h1").innerHTML = "Best decision ever!! 😍💘";
 
 </body>
 </html>
+
 
 
 
