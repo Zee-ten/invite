@@ -65,7 +65,7 @@
   
   <img src="https://tenor.com/view/i-love-u-gif-10935765782451246898t.gif">
 
-  <h1>Will you be my Valentine? 💖</h1>
+  <h1>Will you be my Valentine, my Chakoli? 💖</h1>
 
   <div class="buttons">
     <button id="yesBtn" onclick="yesClicked()">Yes!! 🥰</button>
@@ -73,7 +73,8 @@
   </div>
 
   <script>
-  function runAway(btn) {
+  function runAway(btn) 
+  {
   let rect = btn.getBoundingClientRect();
   let newX = rect.left + (Math.random() * 300 - 150);
   let newY = rect.top  + (Math.random() * 300 - 150);
@@ -84,12 +85,16 @@
   btn.style.left = newX + 'px';
   btn.style.top  = newY + 'px';
   btn.style.position = 'fixed';
-    }
+ }
 
 function yesClicked() {
 
-document.querySelector('img').src = "https://tenor.com/view/nanobombs-cat-flower-gif-9240641794916841111";
-document.querySelector('img').style.maxWidth = '450px';
+confetti({
+    particleCount: 120,
+    spread: 70,
+    origin: { y: 0.6 },
+    colors: ['#ff4081', '#f50057', '#ff80ab']
+  });
 
 document.body.style.background = "linear-gradient(to bottom, #ff4081, #f50057)";
 document.querySelector("h1").innerHTML = "Best decision ever!! 😍💘";
@@ -98,6 +103,7 @@ document.querySelector("h1").innerHTML = "Best decision ever!! 😍💘";
 
 </body>
 </html>
+
 
 
 
