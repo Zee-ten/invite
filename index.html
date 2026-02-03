@@ -72,6 +72,8 @@
     <button id="noBtn" onmouseover="runAway(this)">No 😭</button>
   </div>
 
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  
   <script>
   function runAway(btn) 
   {
@@ -88,7 +90,12 @@
  }
 
 function yesClicked() {
-   
+     confetti({
+    particleCount: 120,
+    spread: 70,
+    origin: { y: 0.6 },
+    colors: ['#ff4081', '#f50057', '#ff80ab']
+  });
       alert("YAYYYYY!!! 🎉💕 I LOVE YOU!!");
       
 document.body.style.background = "linear-gradient(to bottom, #ff4081, #f50057)";
@@ -98,6 +105,7 @@ document.querySelector("h1").innerHTML = "Best decision ever!! 😍💘";
 
 </body>
 </html>
+
 
 
 
