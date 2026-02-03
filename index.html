@@ -62,8 +62,7 @@
   </style>
 </head>
 <body>
-
-  <!-- Change this URL to your own cute image -->
+  
   <img src="https://i.imgur.com/YourCuteImageHere.jpg" alt="Cute picture">
 
   <h1>Will you be my Valentine? 💖</h1>
@@ -75,7 +74,7 @@
 
   <script>
     function runAway(btn) {
-      const maxX = window.innerWidth - 180;   // rough button width safety
+      const maxX = window.innerWidth - 180;   
       const maxY = window.innerHeight - 120;
 
       const newX = Math.random() * maxX;
@@ -83,14 +82,14 @@
 
       btn.style.left = newX + 'px';
       btn.style.top  = newY + 'px';
-      btn.style.transform = 'none'; // remove centering
+      btn.style.transform = 'none'; 
     }
 
     function yesClicked() {
-      // You can make this much fancier: confetti, music, redirect, etc.
+      
       alert("YAYYYYY!!! 🎉💕 I LOVE YOU!!");
       
-      // Optional: change background / text / show heart explosion etc.
+
       document.body.style.background = "linear-gradient(to bottom, #ff4081, #f50057)";
       document.querySelector("h1").innerHTML = "Best decision ever!! 😍💘";
     }
@@ -98,4 +97,5 @@
 
 </body>
 </html>
+
 
