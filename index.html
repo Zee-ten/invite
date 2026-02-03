@@ -73,22 +73,27 @@
   </div>
 
   <script>
-    function runAway(btn) {
-      const maxX = window.innerWidth - 180;   
-      const maxY = window.innerHeight - 120;
+  function runAway(btn) {
+  let rect = btn.getBoundingClientRect();
+  let newX = rect.left + (Math.random() * 300 - 150);
+  let newY = rect.top  + (Math.random() * 300 - 150);
 
-      const newX = Math.random() * maxX;
-      const newY = Math.random() * maxY;
+  newX = Math.max(20, Math.min(window.innerWidth - 160, newX));
+  newY = Math.max(20, Math.min(window.innerHeight - 100, newY));
 
-      btn.style.left = newX + 'px';
-      btn.style.top  = newY + 'px';
-      btn.style.transform = 'none'; 
+  btn.style.left = newX + 'px';
+  btn.style.top  = newY + 'px';
+  btn.style.position = 'fixed';
     }
 
     function yesClicked() {
       
-      alert("YAYYYYY!!! 🎉💕 I LOVE YOU!!");
-      
+    const gif = document.createElement('img');
+    gif.src = "https://tenor.com/view/nanobombs-cat-flower-gif-9240641794916841111"; 
+    gif.style.maxWidth = '400px';
+    gif.style.borderRadius = '20px';
+    gif.style.boxShadow = '0 10px 30px rgba(233,30,99,0.4)';
+    gif.style.marginBottom = '20px';
 
       document.body.style.background = "linear-gradient(to bottom, #ff4081, #f50057)";
       document.querySelector("h1").innerHTML = "Best decision ever!! 😍💘";
@@ -97,6 +102,7 @@
 
 </body>
 </html>
+
 
 
 
