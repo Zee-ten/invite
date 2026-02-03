@@ -1,12 +1,100 @@
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Will You Be My Valentine? 💕</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(to bottom, #ffe6f2, #fff0f5);
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #d63384;
+      text-align: center;
+      overflow: hidden;
+    }
+    img {
+      max-width: 320px;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin: 10px 0 30px;
+      color: #c2185b;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+    .buttons {
+      position: relative;
+      width: 320px;
+      height: 80px;
+    }
+    button {
+      font-size: 1.4rem;
+      padding: 16px 40px;
+      margin: 10px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    #yesBtn {
+      background: #e91e63;
+      color: white;
+    }
+    #yesBtn:hover {
+      background: #c2185b;
+      transform: scale(1.08);
+    }
+    #noBtn {
+      background: #757575;
+      color: white;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
 <body>
-<img src="minion.jpg" alt="Minion">
-<h1>Will you be my valentine, My chakoli?</h1>
-<button onclick="celebrate()">Yes</button>
-<button onmouseover="moveNo(this)">No</button>
-<script>
-function moveNo(btn) { http://btn.style/.position='absolute'; http://btn.style/.left=Math.random()*80+'%'; http://btn.style.top/=Math.random()*80+'%'; }
-function celebrate() { alert('YAYYY!! 🎉'); }
-</script>
+
+  <!-- Change this URL to your own cute image -->
+  <img src="https://i.imgur.com/YourCuteImageHere.jpg" alt="Cute picture">
+
+  <h1>Will you be my Valentine? 💖</h1>
+
+  <div class="buttons">
+    <button id="yesBtn" onclick="yesClicked()">Yes!! 🥰</button>
+    <button id="noBtn" onmouseover="runAway(this)">No 😭</button>
+  </div>
+
+  <script>
+    function runAway(btn) {
+      const maxX = window.innerWidth - 180;   // rough button width safety
+      const maxY = window.innerHeight - 120;
+
+      const newX = Math.random() * maxX;
+      const newY = Math.random() * maxY;
+
+      btn.style.left = newX + 'px';
+      btn.style.top  = newY + 'px';
+      btn.style.transform = 'none'; // remove centering
+    }
+
+    function yesClicked() {
+      // You can make this much fancier: confetti, music, redirect, etc.
+      alert("YAYYYYY!!! 🎉💕 I LOVE YOU!!");
+      
+      // Optional: change background / text / show heart explosion etc.
+      document.body.style.background = "linear-gradient(to bottom, #ff4081, #f50057)";
+      document.querySelector("h1").innerHTML = "Best decision ever!! 😍💘";
+    }
+  </script>
+
 </body>
 </html>
